@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import Container from "./Provider/Container";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -28,7 +29,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable}  antialiased`}>
         {" "}
-        <ThemeProvider attribute="class" disableTransitionOnChange enableSystem defaultTheme="system">{children} </ThemeProvider>
+        <ThemeProvider attribute="class" disableTransitionOnChange enableSystem defaultTheme="system">
+          <Container>
+          {children} 
+           </Container>
+          </ThemeProvider>
       </body>
     </html>
   );
