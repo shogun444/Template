@@ -29,10 +29,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${manrope.variable}  antialiased`}>
         {" "}
-        <ThemeProvider attribute="class" disableTransitionOnChange enableSystem defaultTheme="system">
-          <Container>
+        <ThemeProvider attribute="class" disableTransitionOnChange enableSystem defaultTheme="system">  
           {children} 
-           </Container>
           </ThemeProvider>
       </body>
     </html>
