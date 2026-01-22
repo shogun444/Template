@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 export default function Images() {
   return (
-    <div className="relative w-full min-h-1 pt-20 perspective-[4000px] transform-3d">
+    <div className="relative w-1/2 md:w-full min-h-1 pt-50 md:pt-20 perspective-[4000px] transform-3d">
 
       <motion.div initial={{y:-100 , opacity :0}}
       animate={{y:10,opacity:1}}

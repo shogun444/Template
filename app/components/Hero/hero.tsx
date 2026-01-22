@@ -29,7 +29,7 @@ export function Header({
   className?: string;
 }) {
   return (
-    <div className={cn("max-w-4xl mb-5 mt-10 md:mt-20 lg:mt-32 text-2xl md:text-4xl lg:text-6xl font-bold font-display", className)}>
+    <div className={cn("max-w-4xl mb-5 mt-10 md:mt-20 lg:mt-32  text-2xl md:text-4xl lg:text-6xl font-bold font-display", className)}>
       {children}
     </div>
   );
