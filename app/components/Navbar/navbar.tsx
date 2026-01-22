@@ -4,6 +4,7 @@ import ModeToggle from "../modetoggle";
 import Image from "next/image";
 import Container from "@/app/Provider/Container";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 
 export default function Navbar() {
   const links = [
@@ -31,15 +32,24 @@ export default function Navbar() {
           onClick={() => setVisbible((prev) => !prev)}
           className="flex    items-center md:hidden "
         >
+          <AnimatePresence> 
           {visible && (
-            <div
+           
+            <motion.div
+            initial={{
+              opacity : 0
+            }}
+            animate = {{
+              opacity :1,
+              backdropFilter : "blur(10px)"
+            }}
               onClick={(e) => e.stopPropagation()}
-              className="absolute group flex bg-neutral-500/60  flex-col top-0  w-full h-screen overflow-hidden z-10 gap-5  -translate-x-[93%] mx-auto pl-4"
+              className="absolute group flex bg-neutral-300/10  flex-col top-0  w-full h-screen overflow-hidden z-10 gap-5  -translate-x-[93%] mx-auto pl-4"
             >
               <div className="flex mt-2 justify-between items-center">
                 <Image
                   className="h-10 rounded-md "
-                  src={"/logo-mode.svg"}
+                  src={"/logo.svg"}
                   alt="/logo.svg"
                   height={100}
                   width={100}
@@ -70,14 +80,14 @@ export default function Navbar() {
               {links.map((itm, id) => (
                 <Link
                   key={id}
-                  className=" hover:cursor-pointer  hover:text-neutral-700 text-xl font-medium"
+                  className=" hover:cursor-pointer transition-all duration-150 hover:text-neutral-600 text-xl font-medium"
                   href={itm.href}
                 >
                   {itm.name}
                 </Link>
               ))}
-            </div>
-          )}
+            </motion.div> 
+          )}</AnimatePresence>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
