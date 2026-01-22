@@ -8,12 +8,12 @@ export default function Navbar(){
 
 ]
   return(<div className="rounded-lg max-w-5xl flex  justify-between items-center  dark:bg-neutral-800 p-2 ">
-    <div className="flex items-center ">
+    <Link href={'/'} className="flex items-center ">
       <Image className="h-10  rounded-md " src={"/logo.svg"} alt="/logo.svg" height={100} width={100}/>
       
-  </div>
+  </Link>
     
-  {links.map((itm,id)=>(<Link className=" hover:cursor-pointer hover:text-neutral-700 text-sm font-medium"  href={itm.href}>{itm.name}</Link>))}
+  {links.map((itm,id)=>(<Link key={id} className=" hover:cursor-pointer hover:text-neutral-700 text-sm font-medium"  href={itm.href}>{itm.name}</Link>))}
   
   <div className="flex gap-8">
     <ModeToggle/>
