@@ -32,75 +32,93 @@ export default function Navbar() {
           onClick={() => setVisbible((prev) => !prev)}
           className="flex    items-center md:hidden "
         >
-          <AnimatePresence> 
-          {visible && (
-           
-            <motion.div
-            initial={{
-              opacity : 0
-            }}
-            animate = {{
-              opacity :1,
-              backdropFilter : "blur(10px)"
-            }}
-              onClick={(e) => e.stopPropagation()}
-              className="absolute group flex bg-neutral-300/10  flex-col top-0  w-full h-screen overflow-hidden z-10 gap-5  -translate-x-[93%] mx-auto pl-4"
-            >
-              <div className="flex mt-2 justify-between items-center">
-                <Image
-                  className="h-10 rounded-md "
-                  src={"/logo.svg"}
-                  alt="/logo.svg"
-                  height={100}
-                  width={100}
-                />
-                <span
-                  onClick={() => setVisbible(false)}
-                  className="mr-2 hover:cursor-pointer hover:text-neutral-600"
-                >
-                  {" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="tabler-icon tabler-icon-x "
-                  >
-                    <path d="M18 6l-12 12"></path>
-                    <path d="M6 6l12 12"></path>
-                  </svg>{" "}
-                </span>
-              </div>
-
-              {links.map((itm, id) => (
-                <motion.div
-                initial={{opacity:0,
-                  x:-20
+          <AnimatePresence>
+            {visible && (
+              <motion.div
+                initial={{
+                  opacity: 0,
                 }}
                 animate={{
-                  opacity : 1
-                ,  x:0
+                  opacity: 1,
+                  backdropFilter: "blur(10px)",
                 }}
-transition={{
-  duration : 0.2,
-  delay : id * 0.1
-}}
-                >
-                <Link
-                  key={id}
-                  className=" hover:cursor-pointer transition-all duration-150 hover:text-neutral-600 text-xl font-medium"
-                  href={itm.href}
-                >
-                  {itm.name}
-                </Link>
- </motion.div>              ))}
-            </motion.div> 
-          )}</AnimatePresence>
+                onClick={(e) => e.stopPropagation()}
+                className="absolute group flex bg-neutral-300/10  flex-col top-0  w-full h-screen overflow-hidden z-10 gap-5  -translate-x-[93%] mx-auto pl-4"
+              >
+                <div className="flex mt-2 justify-between items-center">
+                  <Image
+                    className="h-10 rounded-md "
+                    src={"/logo.svg"}
+                    alt="/logo.svg"
+                    height={100}
+                    width={100}
+                  />
+                  <span
+                    onClick={() => setVisbible(false)}
+                    className="mr-2 hover:cursor-pointer hover:text-neutral-600"
+                  >
+                    {" "}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="tabler-icon tabler-icon-x "
+                    >
+                      <path d="M18 6l-12 12"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>{" "}
+                  </span>
+                </div>
+
+                {links.map((itm, id) => (
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    transition={{
+                      duration: 0.2,
+                      delay: id * 0.1,
+                    }}  key={id}
+                  >
+                    <Link
+                     
+                      className=" hover:cursor-pointer transition-all duration-150 hover:text-neutral-600 text-xl font-medium"
+                      href={itm.href}
+                    >
+                      {itm.name}
+                    </Link>
+                  </motion.div>
+                ))}
+
+                <motion.div 
+                 initial={{ opacity: 0, }}
+                    animate={{
+                      opacity: 1,
+                      
+                    }}
+                className="flex  h-full m-5 gap-6 items-end justify-end ">
+        
+          <Link href={"/login"} className="text-lg mb-2 font-medium">
+            Login
+          </Link>
+          <Link
+            href={"/signup"}
+            className=" bg-neutral-800 dark:bg-white dark:text-neutral-800 font-medium  text-lg text-white rounded-lg p-2"
+          >
+            Sign Up
+          </Link>
+        </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
