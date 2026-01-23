@@ -11,7 +11,7 @@ export default function Card({
     <>
       <div
         className={cn(
-          "bg-neutral-200 dark:bg-neutral-800 h-50 w-50 rounded-md",
+          "bg-neutral-200  dark:bg-neutral-800 h-90 w-90 rounded-md gap-5 pb-6 md:pb-8 ",
           className,
         )}
       >
@@ -29,11 +29,11 @@ export function CardTitle({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("flex items-center justify-center", className)}>
+    <div className={cn("px-4 flex text-lg md:text-2xl font-display font-semibold  items-center justify-center", className)}>
       {children}
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
+        width="70"
         height="24"
         viewBox="0 0 24 24"
         fill="none"

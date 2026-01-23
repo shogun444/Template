@@ -4,19 +4,18 @@ import Button from "../ui/button";
 import Image from "next/image";
 import Images from "./Images";
 import Logos from "./logo";
+import Card, { CardTitle } from "./Card";
 
 export default function Hero() {
   return (
     <>
       <Container>
-        <Header>
-          Agents that do the work Approvals that keep you safe.
-        </Header>
+        <Header>Agents that do the work Approvals that keep you safe.</Header>
 
         <SubHeading>
-            Deploy AI agents that plan, act through your tools, and report
-            outcomes—without changing how your teams work.
-          </SubHeading>
+          Deploy AI agents that plan, act through your tools, and report
+          outcomes—without changing how your teams work.
+        </SubHeading>
         <Button varient="primary">Start your free trial</Button>
         <Button varient="secondary">View role based demos</Button>
         {/* <Images /> */}
@@ -31,22 +30,35 @@ export default function Hero() {
         </div>
 
         <Container className="flex items-baseline-last">
-          <Header className="w-3xl" >Built for Fast Moving  Teams That Need Control.</Header>
-          <SubHeading className="w-2xl"> 
+          <Header className="w-3xl">
+            Built for Fast Moving Teams That Need Control.
+          </Header>
+          <SubHeading className="w-2xl">
             Agents work inside your existing tools, with built-in approvals,
             brand and policy guardrails, and full traceability. Every action is
             auditable, every outcome accountable.
           </SubHeading>
         </Container>
-
-        <Header className="max-w-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-3">
+            <Card className="md:rounded-l-4xl">
+              <CardTitle>Prebuilt Agents, Tuned to Your Workflows</CardTitle>
+            </Card>
+            <Card>
+              <CardTitle>Automate Handoffs, Reduce Ops Friction</CardTitle>
+            </Card>
+            <Card className="md:rounded-r-2xl">
+              <CardTitle>
+                Approvals, Guardrails, and Full Auditability
+              </CardTitle>
+            </Card>
+          </div>
+        <Header className="max-w-4xl">
           Built for Speed Designed for Scale
-         
         </Header>
-         <SubHeading>
-            Deploy AI agents that plan, act through your tools, and report
-            outcomes—without changing how your teams work.
-          </SubHeading>
+        <SubHeading>
+          Deploy AI agents that plan, act through your tools, and report
+          outcomes—without changing how your teams work.
+        </SubHeading>
       </Container>
     </>
   );
