@@ -78,6 +78,19 @@ export default function Navbar() {
               </div>
 
               {links.map((itm, id) => (
+                <motion.div
+                initial={{opacity:0,
+                  x:-20
+                }}
+                animate={{
+                  opacity : 1
+                ,  x:0
+                }}
+transition={{
+  duration : 0.2,
+  delay : id * 0.1
+}}
+                >
                 <Link
                   key={id}
                   className=" hover:cursor-pointer transition-all duration-150 hover:text-neutral-600 text-xl font-medium"
@@ -85,7 +98,7 @@ export default function Navbar() {
                 >
                   {itm.name}
                 </Link>
-              ))}
+ </motion.div>              ))}
             </motion.div> 
           )}</AnimatePresence>
 
