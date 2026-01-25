@@ -86,7 +86,7 @@ export default function Hero() {
                 <SkeletonFooter>Content</SkeletonFooter>
               </SkeletonHeader>
             </CardSkeleton>
-             <CardSkeleton className="absolute z-4 perspective-distant transform-3d translate-x-2 translate-y-20 -rotate-x-17 w-90 rotate-y-15 rotate-z-5">
+            <CardSkeleton className="absolute z-4 perspective-distant transform-3d translate-x-2 translate-y-20 -rotate-x-17 w-90 rotate-y-15 rotate-z-5">
               <SkeletonHeader>
                 <SkeletonHeading className="text-green-700 border-green-500">
                   <svg
@@ -161,12 +161,48 @@ export default function Hero() {
                 <SkeletonFooter>Saas</SkeletonFooter>
                 <SkeletonFooter>Content</SkeletonFooter>
               </SkeletonHeader>
-            </CardSkeleton> 
+            </CardSkeleton>
 
-            <CardTitle className="absolute bottom-5">Prebuilt Agents, Tuned to Your Workflows</CardTitle>
+            <CardTitle className="absolute bottom-5">
+              Prebuilt Agents, Tuned to Your Workflows
+            </CardTitle>
           </Card>
-          <Card>
-            <CardTitle>Automate Handoffs, Reduce Ops Friction</CardTitle>
+          <Card className=" relative  overflow-hidden perspective-distant transform-3d">
+            <CardSkeleton className="border-2 w-82 border-neutral-100  translate-y-4 translate-x-10  -rotate-z-15 -rotate-y-1 rotate-x-10 mask-b-from-60% pb-15 ">
+              <SkeletonHeader className="relative flex items-center tracking-tighter pb-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="tabler-icon tabler-icon-circle-dashed-check size-4"
+                >
+                  <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+                  <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+                  <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+                  <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+                  <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+                  <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+                  <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+                  <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+                  <path d="M9 12l2 2l4 -4"></path>
+                </svg>
+                Campaign Planner
+              </SkeletonHeader>
+
+              <div className="border-2   border-neutral-100 rounded-lg p-2">
+                <CardComponents className="" />
+              </div>
+            </CardSkeleton>
+
+            <CardTitle className="absolute bottom-5 ">
+              Automate Handoffs, Reduce Ops Friction
+            </CardTitle>
           </Card>
           <Card className="md:rounded-r-2xl">
             <CardTitle>Approvals, Guardrails, and Full Auditability</CardTitle>
@@ -219,5 +255,63 @@ export function SubHeading({
     >
       {children}
     </div>
+  );
+}
+
+export function CardComponents({ className }: { className?: string }) {
+  const components = [
+    { text: "Fetching Data", time: "10S" },
+    { text: "Processing Data", time: "20S" },
+    { text: "Performing Action", time: "30S" },
+    { text: "Waiting", time: "40S" },
+    { text: "Generating Report", time: "50S" },
+  ];
+  return (
+    <>
+      {components.map((itm, idx) => (
+        <div
+          key={idx}
+          className={cn("flex  justify-between items-center  space-y-2", className)}
+        >
+          <SkeletonHeader className="font-sans text-sm text-neutral-800 font-medium">
+            <span className="flex justify-center items-center size-4 rounded-full bg-green-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="tabler-icon tabler-icon-check size-3  stroke-white  "
+              >
+                <path d="M5 12l5 5l10 -10"></path>
+              </svg>{" "}
+            </span>
+
+            {itm.text}
+          </SkeletonHeader>
+          <SkeletonHeader>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="tabler-icon tabler-icon-ripple size-4"
+            >
+              <path d="M3 7c3 -2 6 -2 9 0s6 2 9 0"></path>
+              <path d="M3 17c3 -2 6 -2 9 0s6 2 9 0"></path>
+              <path d="M3 12c3 -2 6 -2 9 0s6 2 9 0"></path>
+            </svg>
+            <h1 className="text-xs">{itm.time}</h1>
+          </SkeletonHeader>
+        </div>
+      ))}{" "}
+    </>
   );
 }

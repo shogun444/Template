@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Notus",
+  title: "Staticmania",
   description:
-    "Notus is a template created by Nextjs , Motion and Tailwind CSS.",
+    "Staticmania is a template created by Nextjs , Motion and Tailwind CSS.",
 };
 
 export default function RootLayout({
