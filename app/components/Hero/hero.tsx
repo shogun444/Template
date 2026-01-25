@@ -169,7 +169,7 @@ export default function Hero() {
           </Card>
           <Card className=" relative  overflow-hidden perspective-distant transform-3d">
             <CardSkeleton className="border-2 w-82 border-neutral-100  translate-y-4 translate-x-10  -rotate-z-15 -rotate-y-1 rotate-x-10 mask-b-from-60% pb-15 ">
-              <SkeletonHeader className="relative flex items-center tracking-tighter pb-3">
+              <SkeletonHeader className="relative font-medium flex items-center tracking-tighter pb-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -194,9 +194,18 @@ export default function Hero() {
                 </svg>
                 Campaign Planner
               </SkeletonHeader>
+              <div
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(315deg , gray 0px , gray 1px, transparent 1px ,  transparent 50%)",
+                    backgroundSize : "10px 10px",
 
-              <div className="border-2   border-neutral-100 rounded-lg p-2">
-                <CardComponents className="" />
+                }}
+                className=" border-l-2 group hover:border-l-0 transition-all duration-200 mask-b-from-96%  h-42  w-75 border-neutral-100 pl-2  rounded-lg relative"
+              >
+                <div className=" border-2 absolute inset-x-2 -inset-y-2 transition-all duration-300 group-hover:inset-0 w-75 bg-neutral-300  border-neutral-100 rounded-lg p-2">
+                  <CardComponents className="" />
+                </div>
               </div>
             </CardSkeleton>
 
@@ -271,11 +280,14 @@ export function CardComponents({ className }: { className?: string }) {
       {components.map((itm, idx) => (
         <div
           key={idx}
-          className={cn("flex  justify-between items-center  space-y-2", className)}
+          className={cn(
+            "flex  justify-between items-center  space-y-2",
+            className,
+          )}
         >
           <SkeletonHeader className="font-sans text-sm text-neutral-800 font-medium">
-            <span className="flex justify-center items-center size-4 rounded-full bg-green-500">
-              <svg
+            <span className={`flex justify-center items-center size-4 rounded-full ${  itm.text === "Generating Report"? 'bg-yellow-500' : 'bg-green-500' }`}>
+              {itm.text === "Generating Report"? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="tabler-icon tabler-icon-loader-2 size-3 text-white animate-spin"><path d="M12 3a9 9 0 1 0 9 9"></path></svg> :  <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -286,7 +298,9 @@ export function CardComponents({ className }: { className?: string }) {
                 className="tabler-icon tabler-icon-check size-3  stroke-white  "
               >
                 <path d="M5 12l5 5l10 -10"></path>
-              </svg>{" "}
+              </svg>}
+             
+              
             </span>
 
             {itm.text}
