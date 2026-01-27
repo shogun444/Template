@@ -50,122 +50,121 @@ export default function Hero() {
         <div className="my-8 grid  justify-items-center grid-cols-1 md:grid-cols-3">
           <Card className=" md:rounded-l-4xl relative overflow-hidden perspective-distant transform-3d">
             <div className="rotate-x-14 -rotate-y-10 rotate-z-4 -translate-x-4 translate-y-10 ">
-               <CardSkeleton className="w-[93%] absolute top-0 left-4 mask-r-from-99%">
-              <SkeletonHeader>
-                <SkeletonHeading className="text-yellow-500 border-yellow-300">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="tabler-icon tabler-icon-circle-dashed-check size-5"
-                  >
-                    <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
-                    <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
-                    <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
-                    <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
-                    <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
-                    <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
-                    <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
-                    <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
-                    <path d="M9 12l2 2l4 -4"></path>
-                  </svg>
-                  Risk Analysis
-                </SkeletonHeading>
-              </SkeletonHeader>
-              <SkeletonBody>
-                Creates clear, ready-to-use campaign briefs using product info,
-                audience data, and past results.
-              </SkeletonBody>
-              <SkeletonHeader>
-                <SkeletonFooter>Google Ads</SkeletonFooter>
-                <SkeletonFooter>Saas</SkeletonFooter>
-                <SkeletonFooter>Content</SkeletonFooter>
-              </SkeletonHeader>
-            </CardSkeleton>
-            <CardSkeleton className="w-[95%] absolute z-2 top-10 left-7 mask-r-from-99%">
-              <SkeletonHeader>
-                <SkeletonHeading className="text-green-700 border-green-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="tabler-icon tabler-icon-circle-dashed-check size-5"
-                  >
-                    <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
-                    <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
-                    <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
-                    <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
-                    <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
-                    <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
-                    <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
-                    <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
-                    <path d="M9 12l2 2l4 -4"></path>
-                  </svg>
-                  Issue Tracker
-                </SkeletonHeading>
-              </SkeletonHeader>
-              <SkeletonBody className="font-light">
-                Creates clear, ready-to-use campaign briefs using product info,
-                audience data, and past results.
-              </SkeletonBody>
-              <SkeletonHeader>
-                <SkeletonFooter>Google Ads</SkeletonFooter>
-                <SkeletonFooter>Saas</SkeletonFooter>
-                <SkeletonFooter>Content</SkeletonFooter>
-              </SkeletonHeader>
-            </CardSkeleton>
-            <CardSkeleton className="w-[99%] absolute z-3 top-22 left-10 ">
-              <SkeletonHeader>
-                <SkeletonHeading>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="tabler-icon tabler-icon-circle-dashed-check size-5"
-                  >
-                    <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
-                    <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
-                    <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
-                    <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
-                    <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
-                    <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
-                    <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
-                    <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
-                    <path d="M9 12l2 2l4 -4"></path>
-                  </svg>
-                  Campaign Planner
-                </SkeletonHeading>
-              </SkeletonHeader>
-              <SkeletonBody className="">
-                Creates clear, ready-to-use campaign briefs using product info,
-                audience data, and past results.
-              </SkeletonBody>
-              <SkeletonHeader>
-                <SkeletonFooter>Google Ads</SkeletonFooter>
-                <SkeletonFooter>Saas</SkeletonFooter>
-                <SkeletonFooter>Content</SkeletonFooter>
-              </SkeletonHeader>
-            </CardSkeleton>
-               </div>
-           
+              <CardSkeleton className="w-[93%] absolute top-0 left-4 mask-r-from-99%">
+                <SkeletonHeader>
+                  <SkeletonHeading className="text-yellow-500 border-yellow-300">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="tabler-icon tabler-icon-circle-dashed-check size-5"
+                    >
+                      <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+                      <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+                      <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+                      <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+                      <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+                      <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+                      <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+                      <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+                      <path d="M9 12l2 2l4 -4"></path>
+                    </svg>
+                    Risk Analysis
+                  </SkeletonHeading>
+                </SkeletonHeader>
+                <SkeletonBody>
+                  Creates clear, ready-to-use campaign briefs using product
+                  info, audience data, and past results.
+                </SkeletonBody>
+                <SkeletonHeader>
+                  <SkeletonFooter>Google Ads</SkeletonFooter>
+                  <SkeletonFooter>Saas</SkeletonFooter>
+                  <SkeletonFooter>Content</SkeletonFooter>
+                </SkeletonHeader>
+              </CardSkeleton>
+              <CardSkeleton className="w-[95%] absolute z-2 top-10 left-7 mask-r-from-99%">
+                <SkeletonHeader>
+                  <SkeletonHeading className="text-green-700 border-green-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="tabler-icon tabler-icon-circle-dashed-check size-5"
+                    >
+                      <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+                      <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+                      <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+                      <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+                      <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+                      <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+                      <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+                      <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+                      <path d="M9 12l2 2l4 -4"></path>
+                    </svg>
+                    Issue Tracker
+                  </SkeletonHeading>
+                </SkeletonHeader>
+                <SkeletonBody className="font-light">
+                  Creates clear, ready-to-use campaign briefs using product
+                  info, audience data, and past results.
+                </SkeletonBody>
+                <SkeletonHeader>
+                  <SkeletonFooter>Google Ads</SkeletonFooter>
+                  <SkeletonFooter>Saas</SkeletonFooter>
+                  <SkeletonFooter>Content</SkeletonFooter>
+                </SkeletonHeader>
+              </CardSkeleton>
+              <CardSkeleton className="w-[99%] absolute z-3 top-22 left-10 ">
+                <SkeletonHeader>
+                  <SkeletonHeading>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="tabler-icon tabler-icon-circle-dashed-check size-5"
+                    >
+                      <path d="M8.56 3.69a9 9 0 0 0 -2.92 1.95"></path>
+                      <path d="M3.69 8.56a9 9 0 0 0 -.69 3.44"></path>
+                      <path d="M3.69 15.44a9 9 0 0 0 1.95 2.92"></path>
+                      <path d="M8.56 20.31a9 9 0 0 0 3.44 .69"></path>
+                      <path d="M15.44 20.31a9 9 0 0 0 2.92 -1.95"></path>
+                      <path d="M20.31 15.44a9 9 0 0 0 .69 -3.44"></path>
+                      <path d="M20.31 8.56a9 9 0 0 0 -1.95 -2.92"></path>
+                      <path d="M15.44 3.69a9 9 0 0 0 -3.44 -.69"></path>
+                      <path d="M9 12l2 2l4 -4"></path>
+                    </svg>
+                    Campaign Planner
+                  </SkeletonHeading>
+                </SkeletonHeader>
+                <SkeletonBody className="">
+                  Creates clear, ready-to-use campaign briefs using product
+                  info, audience data, and past results.
+                </SkeletonBody>
+                <SkeletonHeader>
+                  <SkeletonFooter>Google Ads</SkeletonFooter>
+                  <SkeletonFooter>Saas</SkeletonFooter>
+                  <SkeletonFooter>Content</SkeletonFooter>
+                </SkeletonHeader>
+              </CardSkeleton>
+            </div>
 
             <CardTitle className="absolute bottom-5">
               Prebuilt Agents, Tuned to Your Workflows
@@ -201,26 +200,24 @@ export default function Hero() {
               <div
                 style={{
                   backgroundImage:
-                    "repeating-linear-gradient(315deg , gray 0px , gray 1px, transparent 1px ,  transparent 50%)",
-                    backgroundSize : "10px 10px",
-
+                    "repeating-linear-gradient(315deg , gray 0px , black 1px, transparent 1px ,  transparent 50%)",
+                  backgroundSize: "10px 10px",
                 }}
                 className=" border-l-2 dark:border-neutral-600 group hover:border-l-0 transition-all duration-200   h-66  w-77 border-neutral-100  pl-2 -z-10 rounded-lg relative"
               >
-                <div className=" hover:border-2 z-10 absolute inset-x-1 -inset-y-1 transition-all duration-200 group-hover:inset-0 w-77 h-66 dark:border-neutral-600 bg-neutral-300  dark:bg-neutral-700 border-neutral-100 rounded-lg p-3">
+                <div className=" border-2 dark:hover:border-neutral-600 z-10 absolute inset-x-1 -inset-y-1 transition-all duration-200 group-hover:inset-0 w-77 h-66 dark:border-neutral-600 bg-neutral-300  dark:bg-neutral-700 border-neutral-100 rounded-lg p-3">
                   <CardComponents className="" />
                 </div>
               </div>
             </CardSkeleton>
-              
-                
+
             <CardTitle className="absolute bottom-5 ">
               Automate Handoffs, Reduce Ops Friction
             </CardTitle>
           </Card>
           <Card className="md:rounded-r-2xl">
-<DottedGlowBackgroundDemoSecond/>
-            
+            <DottedGlowBackgroundDemoSecond />
+
             <CardTitle>Approvals, Guardrails, and Full Auditability</CardTitle>
           </Card>
         </div>
@@ -230,6 +227,27 @@ export default function Hero() {
         <SubHeading>
           Deploy AI agents that plan, act through your tools, and report
           outcomes—without changing how your teams work.
+        </SubHeading>
+      </Container>
+      <Container>
+        <Header>Governed AI, Trusted Outcomes</Header>
+        <SubHeading>
+          Deploy AI agents with built-in approvals, brand guardrails, and audit
+          trails. Every step is visible, reviewable, and compliant.
+        </SubHeading>
+      </Container>
+      <Container>
+       
+
+        <Header>
+           <SubHeading>Trusted by 500+ enterprise companies</SubHeading>
+          Affordable pricing. <br />
+          Easy scaling.
+        </Header>
+        <SubHeading>
+          Start small to explore automation, add agents as you scale, and unlock
+          enterprise-grade guardrails, orchestration, and reporting when you're
+          ready
         </SubHeading>
       </Container>
     </>
@@ -293,21 +311,38 @@ export function CardComponents({ className }: { className?: string }) {
           )}
         >
           <SkeletonHeader className="font-sans text-sm text-neutral-800 dark:text-neutral-200 font-medium">
-            <span className={`flex justify-center items-center size-4 rounded-full ${  itm.text === "Generating Report"? 'bg-yellow-500' : 'bg-green-500' }`}>
-              {itm.text === "Generating Report"? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="tabler-icon tabler-icon-loader-2 size-3 text-white animate-spin"><path d="M12 3a9 9 0 1 0 9 9"></path></svg> :  <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="tabler-icon tabler-icon-check size-3  stroke-white  "
-              >
-                <path d="M5 12l5 5l10 -10"></path>
-              </svg>}
-             
-              
+            <span
+              className={`flex justify-center items-center size-4 rounded-full ${itm.text === "Generating Report" ? "bg-yellow-500" : "bg-green-500"}`}
+            >
+              {itm.text === "Generating Report" ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="tabler-icon tabler-icon-loader-2 size-3 text-white animate-spin"
+                >
+                  <path d="M12 3a9 9 0 1 0 9 9"></path>
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="tabler-icon tabler-icon-check size-3  stroke-white  "
+                >
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+              )}
             </span>
 
             {itm.text}
@@ -332,7 +367,7 @@ export function CardComponents({ className }: { className?: string }) {
             <h1 className="text-xs">{itm.time}</h1>
           </SkeletonHeader>
         </div>
-      ))}{" "}
+      ))}
     </>
   );
 }

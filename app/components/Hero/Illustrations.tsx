@@ -7,8 +7,9 @@ export function ShieldIllustration() {
         viewBox="0 0 181 197"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="relative z-10"
+        
       >
+        
         <foreignObject x="105.193" y="116.105" width="77.237" height="79.4867">
           <div
             style={{
