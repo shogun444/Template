@@ -12,6 +12,7 @@ import Card, {
   SkeletonHeader,
   SkeletonHeading,
 } from "./Card";
+import { DottedGlowBackgroundDemoSecond } from "./ThirdComponent";
 
 export default function Hero() {
   return (
@@ -47,8 +48,9 @@ export default function Hero() {
           </SubHeading>
         </Container>
         <div className="my-8 grid  justify-items-center grid-cols-1 md:grid-cols-3">
-          <Card className="md:rounded-l-4xl relative overflow-hidden">
-            <CardSkeleton className="absolute z-1 perspective-distant transform-3d translate-y-10 -rotate-x-17 rotate-y-15 rotate-z-5">
+          <Card className=" md:rounded-l-4xl relative overflow-hidden perspective-distant transform-3d">
+            <div className="rotate-x-14 -rotate-y-10 rotate-z-4 -translate-x-4 translate-y-10 ">
+               <CardSkeleton className="w-[93%] absolute top-0 left-4 mask-r-from-99%">
               <SkeletonHeader>
                 <SkeletonHeading className="text-yellow-500 border-yellow-300">
                   <svg
@@ -86,7 +88,7 @@ export default function Hero() {
                 <SkeletonFooter>Content</SkeletonFooter>
               </SkeletonHeader>
             </CardSkeleton>
-            <CardSkeleton className="absolute z-4 perspective-distant transform-3d translate-x-2 translate-y-20 -rotate-x-17 w-90 rotate-y-15 rotate-z-5">
+            <CardSkeleton className="w-[95%] absolute z-2 top-10 left-7 mask-r-from-99%">
               <SkeletonHeader>
                 <SkeletonHeading className="text-green-700 border-green-500">
                   <svg
@@ -114,7 +116,7 @@ export default function Hero() {
                   Issue Tracker
                 </SkeletonHeading>
               </SkeletonHeader>
-              <SkeletonBody>
+              <SkeletonBody className="font-light">
                 Creates clear, ready-to-use campaign briefs using product info,
                 audience data, and past results.
               </SkeletonBody>
@@ -124,7 +126,7 @@ export default function Hero() {
                 <SkeletonFooter>Content</SkeletonFooter>
               </SkeletonHeader>
             </CardSkeleton>
-            <CardSkeleton className="absolute z-4 perspective-distant transform-3d translate-x-4 w-93 translate-y-33 -rotate-x-17 rotate-y-12 rotate-z-5">
+            <CardSkeleton className="w-[99%] absolute z-3 top-22 left-10 ">
               <SkeletonHeader>
                 <SkeletonHeading>
                   <svg
@@ -152,7 +154,7 @@ export default function Hero() {
                   Campaign Planner
                 </SkeletonHeading>
               </SkeletonHeader>
-              <SkeletonBody>
+              <SkeletonBody className="">
                 Creates clear, ready-to-use campaign briefs using product info,
                 audience data, and past results.
               </SkeletonBody>
@@ -162,14 +164,16 @@ export default function Hero() {
                 <SkeletonFooter>Content</SkeletonFooter>
               </SkeletonHeader>
             </CardSkeleton>
+               </div>
+           
 
             <CardTitle className="absolute bottom-5">
               Prebuilt Agents, Tuned to Your Workflows
             </CardTitle>
           </Card>
-          <Card className=" relative  overflow-hidden perspective-distant transform-3d">
-            <CardSkeleton className="border-2 w-82 border-neutral-100  translate-y-4 translate-x-10  -rotate-z-15 -rotate-y-1 rotate-x-10 mask-b-from-60% pb-15 ">
-              <SkeletonHeader className="relative font-medium flex items-center tracking-tighter pb-3">
+          <Card className=" relative  overflow-hidden perspective-distant transform-3d ">
+            <CardSkeleton className="border-2 w-82 border-neutral-100  translate-y-4 translate-x-10  -rotate-z-15 -rotate-y-1 rotate-x-10 mask-b-from-50% pb-22 ">
+              <SkeletonHeader className="relative  font-medium flex items-center tracking-tighter pb-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -201,19 +205,22 @@ export default function Hero() {
                     backgroundSize : "10px 10px",
 
                 }}
-                className=" border-l-2 group hover:border-l-0 transition-all duration-200 mask-b-from-96%  h-42  w-75 border-neutral-100 pl-2  rounded-lg relative"
+                className=" border-l-2 dark:border-neutral-600 group hover:border-l-0 transition-all duration-200   h-66  w-77 border-neutral-100  pl-2 -z-10 rounded-lg relative"
               >
-                <div className=" border-2 absolute inset-x-2 -inset-y-2 transition-all duration-300 group-hover:inset-0 w-75 bg-neutral-300  border-neutral-100 rounded-lg p-2">
+                <div className=" hover:border-2 z-10 absolute inset-x-1 -inset-y-1 transition-all duration-200 group-hover:inset-0 w-77 h-66 dark:border-neutral-600 bg-neutral-300  dark:bg-neutral-700 border-neutral-100 rounded-lg p-3">
                   <CardComponents className="" />
                 </div>
               </div>
             </CardSkeleton>
-
+              
+                
             <CardTitle className="absolute bottom-5 ">
               Automate Handoffs, Reduce Ops Friction
             </CardTitle>
           </Card>
           <Card className="md:rounded-r-2xl">
+<DottedGlowBackgroundDemoSecond/>
+            
             <CardTitle>Approvals, Guardrails, and Full Auditability</CardTitle>
           </Card>
         </div>
@@ -285,7 +292,7 @@ export function CardComponents({ className }: { className?: string }) {
             className,
           )}
         >
-          <SkeletonHeader className="font-sans text-sm text-neutral-800 font-medium">
+          <SkeletonHeader className="font-sans text-sm text-neutral-800 dark:text-neutral-200 font-medium">
             <span className={`flex justify-center items-center size-4 rounded-full ${  itm.text === "Generating Report"? 'bg-yellow-500' : 'bg-green-500' }`}>
               {itm.text === "Generating Report"? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="tabler-icon tabler-icon-loader-2 size-3 text-white animate-spin"><path d="M12 3a9 9 0 1 0 9 9"></path></svg> :  <svg
                 xmlns="http://www.w3.org/2000/svg"
