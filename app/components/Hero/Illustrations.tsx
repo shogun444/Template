@@ -23,14 +23,14 @@ export function ShieldIllustration() {
         <g data-figma-bg-blur-radius="33.452">
           <mask id="path-1-inside-1_44_1389" fill="white">
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M148.979 149.557C148.494 150.173 148.004 150.782 147.511 151.384L138.646 162.139C139.138 161.537 139.628 160.928 140.113 160.312L148.979 149.557Z"
             ></path>
           </mask>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M148.979 149.557C148.494 150.173 148.004 150.782 147.511 151.384L138.646 162.139C139.138 161.537 139.628 160.928 140.113 160.312L148.979 149.557Z"
             fill="url(#paint0_linear_44_1389)"
             fillOpacity="0.2"
@@ -62,7 +62,7 @@ export function ShieldIllustration() {
           fill="url(#paint2_linear_44_1389)"
           fillOpacity="0.2"
           stroke="url(#paint3_linear_44_1389)"
-          stroke-width="0.2"
+          strokeWidth="0.2"
         ></path>
         <foreignObject x="-32.8778" y="4.68495" width="213.84" height="224.859">
           <div
@@ -80,7 +80,7 @@ export function ShieldIllustration() {
           fill="url(#paint4_linear_44_1389)"
           fillOpacity="0.2"
           stroke="url(#paint5_linear_44_1389)"
-          stroke-width="0.2"
+          strokeWidth="0.2"
         ></path>
         <foreignObject
           x="-14.7549"
@@ -103,9 +103,9 @@ export function ShieldIllustration() {
           fill="url(#paint6_linear_44_1389)"
           fillOpacity="0.2"
           stroke="url(#paint7_linear_44_1389)"
-          stroke-width="0.2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="0.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
         <foreignObject
           x="-15.7733"
@@ -128,9 +128,9 @@ export function ShieldIllustration() {
           fill="url(#paint8_linear_44_1389)"
           fillOpacity="0.6"
           stroke="url(#paint9_linear_44_1389)"
-          stroke-width="0.2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="0.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         ></path>
         <g filter="url(#filter6_i_44_1389)">
           <path
@@ -144,8 +144,8 @@ export function ShieldIllustration() {
             transform="translate(-105.193 -116.105)"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M148.979 149.557C148.494 150.173 148.004 150.782 147.511 151.384L138.646 162.139C139.138 161.537 139.628 160.928 140.113 160.312L148.979 149.557Z"
             ></path>
           </clipPath>
