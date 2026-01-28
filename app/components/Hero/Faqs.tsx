@@ -50,7 +50,7 @@ export function Background({
   children: React.ReactNode;
 }) {
   return (
-    <div className=" items-center my-4 bg-neutral-200 rounded-lg p-4 dark:bg-neutral-600">
+    <div className=" items-center my-4 bg-neutral-200 rounded-lg p-4 dark:bg-neutral-700">
       {children}
     </div>
   );

@@ -14,6 +14,7 @@ import Card, {
 } from "./Card";
 import { DottedGlowBackgroundDemoSecond } from "./ThirdComponent";
 import FAQS from "./Faqs";
+import PricingCard, { CardLeft, CardRight, Svg } from "./Pricing";
 
 export default function Hero() {
   return (
@@ -238,10 +239,8 @@ export default function Hero() {
         </SubHeading>
       </Container>
       <Container>
-       
-
         <Header>
-           <SubHeading>Trusted by 500+ enterprise companies</SubHeading>
+          <SubHeading>Trusted by 500+ enterprise companies</SubHeading>
           Affordable pricing. <br />
           Easy scaling.
         </Header>
@@ -250,14 +249,46 @@ export default function Hero() {
           enterprise-grade guardrails, orchestration, and reporting when you're
           ready
         </SubHeading>
+
+        <PricingCard>
+          <CardLeft
+            pricing="$10"
+            text="Perfect for individuals or small teams exploring automation."
+          >
+            <Button varient="secondary">Start your free trial</Button>
+          </CardLeft>
+          <CardRight>
+            <Svg>1ta AI Agent Included</Svg>
+            <Svg>Standard Integrations</Svg>
+            <Svg>Basic Approval Flows</Svg>
+            <Svg>7 Day activity logs</Svg>
+          </CardRight>
+        </PricingCard>
+        <PricingCard>
+          <CardLeft
+            pricing="$60"
+            text="Ideal for growing teams ready to scale automation safely."
+          >
+            <Button varient="secondary">Contact Sales</Button>
+          </CardLeft>
+          <CardRight>
+            <Svg>
+              Upto 5 AI Agents   
+            </Svg>
+            <Svg>Multi Agent Orchestration</Svg>
+            <Svg>30 Day activity logs</Svg>
+            <Svg>ROI
+              Insights</Svg>
+            <Svg>Advanced Approval Flows</Svg>
+            
+          </CardRight>
+        </PricingCard>
       </Container>
 
       <Container>
-        <Header>
-          Frequently Asked Questions
-        </Header>
-                  
-        <FAQS/>
+        <Header>Frequently Asked Questions</Header>
+
+        <FAQS />
       </Container>
     </>
   );
