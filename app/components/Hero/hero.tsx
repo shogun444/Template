@@ -13,6 +13,7 @@ import Card, {
   SkeletonHeading,
 } from "./Card";
 import { DottedGlowBackgroundDemoSecond } from "./ThirdComponent";
+import FAQS from "./Faqs";
 
 export default function Hero() {
   return (
@@ -249,6 +250,14 @@ export default function Hero() {
           enterprise-grade guardrails, orchestration, and reporting when you're
           ready
         </SubHeading>
+      </Container>
+
+      <Container>
+        <Header>
+          Frequently Asked Questions
+        </Header>
+                  
+        <FAQS/>
       </Container>
     </>
   );
