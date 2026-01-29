@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 export default function FAQS() {
   return (
     <>
+    
       <Background>
         <Questions>What is Agenforce AI?</Questions>
         <Answers>

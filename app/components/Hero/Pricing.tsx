@@ -1,7 +1,7 @@
 import Button from "../ui/button"
 
 export default function PricingCard({children ,  className} : {children : React.ReactNode, className ? : string}){
-  return <div className="bg-neutral-400 m-4 grid items-center justify-center p-5 grid-cols-2 dark:bg-neutral-700 h-70 w-lg rounded-2xl">
+  return <div className="bg-neutral-200 m-4 grid items-center justify-center p-5 grid-cols-2 dark:bg-neutral-800 h-70 w-136 rounded-2xl">
   {children}
   </div>
 }
@@ -9,14 +9,15 @@ export default function PricingCard({children ,  className} : {children : React.
 
 export function CardLeft({className , children,pricing,text} : {className ? : string , children : React.ReactNode,pricing : string,text : string}){
   return(<div className="col-span-1">
- <h1 className="max-w-4xl    text-2xl md:text-4xl lg:text-6xl font-bold font-display">{pricing} <span className="font-display text-neutral-600">/mo</span></h1>
-<h1 className="max-w-xs md:text-lg dark:text-neutral-400  text-base font-semibold text-neutral-500 mb-8  font-sans">{text}</h1>
+    <div className="flex"><h1 className="max-w-4xl    text-2xl md:text-4xl lg:text-6xl font-bold font-display">{pricing} <span className="font-display text-neutral-600">/mo</span></h1></div>
+ 
+<h1 className="w-58 md:text-lg pt-5 dark:text-neutral-400  text-base font-semibold text-neutral-500 mb-8  font-sans">{text}</h1>
 {children}
   </div>)
 }
 
 export function CardRight({className , children} : {className ? : string , children : React.ReactNode}){
-  return(<div className="col-span-1 flex flex-col">
+  return(<div className="col-span-1 flex flex-col font-medium pl-5">
   {children}
   </div>)
 }
