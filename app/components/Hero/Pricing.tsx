@@ -1,7 +1,7 @@
 import Button from "../ui/button"
 
 export default function PricingCard({children ,  className} : {children : React.ReactNode, className ? : string}){
-  return <div className="bg-neutral-200 m-4 grid items-center justify-center p-5 grid-cols-2 dark:bg-neutral-800 h-70 w-136 rounded-2xl">
+  return <div className="bg-neutral-200 m-4 md:grid items-center justify-center p-5 md:grid-cols-2 dark:bg-neutral-800  md:h-70 md:w-136 rounded-2xl">
   {children}
   </div>
 }
@@ -17,7 +17,7 @@ export function CardLeft({className , children,pricing,text} : {className ? : st
 }
 
 export function CardRight({className , children} : {className ? : string , children : React.ReactNode}){
-  return(<div className="col-span-1 flex flex-col font-medium pl-5">
+  return(<div className="col-span-1 flex flex-col font-medium pt-10 md:pt-1  md:pl-5 ">
   {children}
   </div>)
 }

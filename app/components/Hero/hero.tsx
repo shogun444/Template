@@ -15,6 +15,7 @@ import Card, {
 import { DottedGlowBackgroundDemoSecond } from "./ThirdComponent";
 import FAQS from "./Faqs";
 import PricingCard, { CardLeft, CardRight, Svg } from "./Pricing";
+import Footer from "../Footer/footer";
 
 export default function Hero() {
   return (
@@ -238,7 +239,7 @@ export default function Hero() {
           trails. Every step is visible, reviewable, and compliant.
         </SubHeading>
       </Container>
-      <Container className="grid grid-cols-2 gap-10">
+      <Container className="md:grid md:grid-cols-2 gap-10">
 
 <div className="col-span-1"><Header>
           <SubHeading>Trusted by 500+ enterprise companies</SubHeading>
@@ -297,6 +298,7 @@ export default function Hero() {
 
         <FAQS />
       </Container>
+      <Footer/>
     </>
   );
 }

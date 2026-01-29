@@ -1,10 +1,13 @@
+"use client"
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export default function FAQS() {
+  const [open,setOpen] = useState<boolean>(false)
   return (
     <>
     
-      <Background>
+      <Background onClick={()=>setOpen(true)}>
         <Questions>What is Agenforce AI?</Questions>
         <Answers>
           Agenforce AI is a platform for building and managing AI agents.
@@ -46,12 +49,19 @@ export default function FAQS() {
 export function Background({
   className,
   children,
+  id,
+  open ,
+  onClick
 }: {
   className?: string;
   children: React.ReactNode;
+  id ?: number ,
+  open ?: boolean ,
+  onClick ?: ()=>void,
+  
 }) {
   return (
-    <div className=" items-center my-4 bg-neutral-200 rounded-lg p-4 dark:bg-neutral-700">
+    <div className={`items-center ${open ? "h-20" : "h-15"} my-4 bg-neutral-200 rounded-lg p-4 dark:bg-neutral-700 overflow-hidden`}>
       {children}
     </div>
   );
@@ -60,9 +70,13 @@ export function Background({
 export function Questions({
   className,
   children,
+  id,
+  open
 }: {
   className?: string;
   children: React.ReactNode;
+   id ?: number ,
+  open ?: boolean
 }) {
   return (
     <div
@@ -72,7 +86,7 @@ export function Questions({
       )}
     >
       {children}
-      <svg
+      {open &&  <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -85,7 +99,8 @@ export function Questions({
         className="tabler-icon tabler-icon-minus size-6 black dark:text-white "
       >
         <path d="M5 12l14 0"></path>
-      </svg>
+      </svg>}
+      
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
